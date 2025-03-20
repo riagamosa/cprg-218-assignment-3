@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #cccccc;
+}
+
+header{
+    background-color: #120323;
+    justify-items: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+h1{
+    color: #97bf04;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav{
+    background-color: #d9043d;
+    width: 100%;
+    justify-items: center;
+    padding: 0.5rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 80%;
+    
+}
+
+h2{
+    text-align: center;
+    padding:1rem;
+}
+
+h3{
+    padding: 1rem 0rem 1rem 0rem ;
+
+}
+figure{
+    border: 20px solid white;
+    background-color: white;
+}
+
+figure img{
+    border-bottom: 10px solid #97bf04;
+    max-width: 650px;
+}
+
+figure figcaption{
+    background-color: white;
+    padding-bottom: 1rem
+
+}
+
+footer{
+    background-color: #d9043d;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+@media screen and (min-width:1000px){
+    nav ul li{
+        display: inline;
+        padding: 2rem;
+    }
+    main div#gallery-container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem 2rem;
+        margin: 1rem;
+        margin-top: 0;
+    }
+    figure img{
+        width:100%;
+        height: auto;
+    }
+    figure:last-of-type{
+        display: grid;
+        grid-column: span 2;
+        place-items: center;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:999px){
+    nav ul li{
+        display: inline;
+        padding: 2rem;
+    }
+    main div#gallery-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem 3rem;
+        margin: 1rem;
+        margin-top: 0;
+    }
+    figure img{
+        width:100%;
+        height: auto;
+    }
+    figure:last-of-type{
+        display: grid;
+        grid-column: span 2;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width:768px){
+    header{
+        padding-bottom: 1rem;
+    }
+    nav{
+        background-color: transparent;
+    }
+    nav ul{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        width: 95%;
+        gap: 10px;
+    }
+    nav ul li {
+        border: 2px solid #97bf04;
+        background-color: #d9043d;
+        padding:10px;
+        text-align: center;
+        text-decoration: none;
+        list-style-type: none;
+    }
+    main div#gallery-container{
+        display: grid;
+        gap:1em;
+        margin: 2rem;
+        margin-top: 0;
+    }
+    figure img{
+        width:100%;
+        height: auto;
+        
+    }
+}
